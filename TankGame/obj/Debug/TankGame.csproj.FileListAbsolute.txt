@@ -1,0 +1,7 @@
+C:\Users\JacobCooper\Desktop\C# Unit Test - Student Copy\TankGame\obj\Debug\TankGame.csprojAssemblyReference.cache
+C:\Users\JacobCooper\Desktop\C# Unit Test - Student Copy\TankGame\obj\Debug\TankGame.csproj.CoreCompileInputs.cache
+C:\Users\JacobCooper\Desktop\C# Unit Test - Student Copy\TankGame\bin\Debug\TankGame.exe.config
+C:\Users\JacobCooper\Desktop\C# Unit Test - Student Copy\TankGame\bin\Debug\TankGame.exe
+C:\Users\JacobCooper\Desktop\C# Unit Test - Student Copy\TankGame\bin\Debug\TankGame.pdb
+C:\Users\JacobCooper\Desktop\C# Unit Test - Student Copy\TankGame\obj\Debug\TankGame.exe
+C:\Users\JacobCooper\Desktop\C# Unit Test - Student Copy\TankGame\obj\Debug\TankGame.pdb
