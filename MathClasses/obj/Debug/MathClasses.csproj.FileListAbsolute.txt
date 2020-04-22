@@ -1,0 +1,7 @@
+C:\Users\JacobCooper\Desktop\C# Unit Test - Student Copy\MathClasses\bin\Debug\MathClasses.exe.config
+C:\Users\JacobCooper\Desktop\C# Unit Test - Student Copy\MathClasses\bin\Debug\MathClasses.exe
+C:\Users\JacobCooper\Desktop\C# Unit Test - Student Copy\MathClasses\bin\Debug\MathClasses.pdb
+C:\Users\JacobCooper\Desktop\C# Unit Test - Student Copy\MathClasses\obj\Debug\MathClasses.csprojAssemblyReference.cache
+C:\Users\JacobCooper\Desktop\C# Unit Test - Student Copy\MathClasses\obj\Debug\MathClasses.csproj.CoreCompileInputs.cache
+C:\Users\JacobCooper\Desktop\C# Unit Test - Student Copy\MathClasses\obj\Debug\MathClasses.exe
+C:\Users\JacobCooper\Desktop\C# Unit Test - Student Copy\MathClasses\obj\Debug\MathClasses.pdb
