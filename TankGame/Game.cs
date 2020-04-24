@@ -207,7 +207,10 @@ namespace TankGame
 
             lastTime = currentTime;
         }
-
+        
+        /// <summary>
+        /// Drawing the objects and other ui based instances.
+        /// </summary>
         public void Draw()
         {
             BeginDrawing();
