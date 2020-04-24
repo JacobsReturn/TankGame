@@ -8,18 +8,25 @@ using static Raylib.Raylib;
 
 namespace TankGame
 {
+    /// <summary>
+    /// Bullet to fire at objects.
+    /// </summary>
     class Bullet : GameObject
     {
-        public bool toRemove = false;
-        public bool explode = false;
-        public bool bounce = false;
+        public bool toRemove = false; // To remove? (when it goes out of border or finishes exploding)
+        public bool explode = false; // About to explode?
+        public bool bounce = false; // Should bounce?
         public int bounces = 0; // 3 then stop bouncing.
-        public bool justShot = true;
+        public bool justShot = true; // Did the bullet just shoot?
 
         public Bullet()
         {
         }
 
+        /// <summary>
+        /// Handling explosions and bullet travelling.
+        /// </summary>
+        /// <param name="deltaTime">Speed of frames.</param>
         public override void OnUpdate(float deltaTime)
         {
             if (!explode)
@@ -40,6 +47,10 @@ namespace TankGame
             }
         }
 
+        /// <summary>
+        /// Checking if it collided, so we can explode bullet or bounce.
+        /// </summary>
+        /// <param name="hit">The object tht hit<param>
         public override void OnCollide(GameObject hit)
         {
             if (hit == Game.tankObject | hit == Game.turretObject)
@@ -51,6 +62,7 @@ namespace TankGame
             {
                 //toRemove = true;
 
+                // Bad bouncing method, change later.
                 if (bounce)
                 {
                     //Vector3 self = globalTransform.ToVector3();
@@ -60,7 +72,7 @@ namespace TankGame
 
                     //globalTransform.RotateZ(360-angle + globalTransform.GetRotation());
 
-                    globalTransform.RotateZ(globalTransform.GetRotation() + 360);
+                    globalTransform.RotateZ(globalTransform.GetRotation() + 360); // Flipping rotation.
 
                     //bounces += 1;
 
@@ -71,21 +83,23 @@ namespace TankGame
                 }
                 else
                 {
-                    explode = true;
-                    canCollide = false;
+                    explode = true; // Making it explode.
+                    canCollide = false; // Making it so nothing collides with it anymore.
                 }
             }
         }
 
-        float explosionLerp = 0;
+        float explosionLerp = 0; // Explosion animation speed. (increase frames, and it gets fasttteerrr)
 
         public override void OnDraw()
         {
             if (explode)
             {
-                explosionLerp = Lerp(explosionLerp, 1f, 0.05f);
+                explosionLerp = Lerp(explosionLerp, 1f, 0.05f); // Lerping explosion animation, for nice smooth animation.
 
-                if (explosionLerp > 0.9) toRemove = true;
+                if (explosionLerp > 0.9) toRemove = true; // Setting the bullet to remove when basically done.
+
+                // Drawing the explosion animation.
 
                 Vector3 pos = globalTransform.ToVector3();
                 DrawCircle((int)pos.x + (int)(25 * explosionLerp), (int)pos.y, 5, Color.ORANGE);
@@ -102,6 +116,7 @@ namespace TankGame
             }
             else
             {
+                // Moving the bullet.
                 Vector3 pos = globalTransform.ToVector3();
                 if (bounce) DrawCircle((int)pos.x, (int)pos.y, 10, Color.PURPLE);
                 else DrawCircle((int)pos.x, (int)pos.y, 10, Color.BLACK);
